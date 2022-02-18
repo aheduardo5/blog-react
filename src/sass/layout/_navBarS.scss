@@ -1,0 +1,25 @@
+.Navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navbar-container .links {
+  font-size: 20px;
+  text-decoration: none;
+  color: #575656;
+  margin: 1rem;
+  background-color: #ffffff;
+  
+}
+
+
+.Navbar-container .isactive {
+  font-size: 20px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #222222;
+  margin: 1rem;
+  transition: 0.5s;
+}
+

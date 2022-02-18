@@ -1,0 +1,44 @@
+.post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  .img-post {
+    border-bottom: 1px solid black;
+    img {
+      width: 50rem;
+    }
+  }
+
+  .description-post {
+    span {
+      font-size: 1.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      transition: 0.5s;
+    }
+    span:hover {
+      color: #e74708;
+    }
+  }
+  form {
+    border: 1px solid black;
+    .content {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 40rem;
+      label {
+        font-weight: 900;
+      }
+      input {
+        width: 40rem;
+      }
+      textarea {
+        width: 40rem;
+      }
+  
+    }
+  }
+}
