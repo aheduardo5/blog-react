@@ -35,7 +35,7 @@ const CommentBox = ({ post, deleteHandler }) => {
               <h3>Comments:</h3>
               <p>{comment.comment}</p>
               <button>Edit</button>
-              <button >Delete</button>
+              <button>Delete</button>
             </div>
           );
         })}

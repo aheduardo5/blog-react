@@ -1,27 +1,13 @@
 // import { AppBar, Toolbar, Typography } from "@mui/material";
-import React from "react";
-import {  NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { HiPencil } from "react-icons/hi";
 import CreatePost from "./CreatePost";
-import { Box, Button, Modal } from "@mui/material";
-
-const styles = {
-  modalCreatePost: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 400,
-    height: 550,
-    bgcolor: "background.paper",
-    border: "none",
-    borderRadius: "3%",
-    boxShadow: 24,
-    p: 4,
-  }
-};
+import { Box, Modal } from "@mui/material";
+import { postContext } from "../context/postContext";
 
 const NavBarS = () => {
+  const { styles } = useContext(postContext);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -72,16 +58,10 @@ const NavBarS = () => {
         </NavLink>
 
         <div className="createPost-modal">
-          <Button onClick={handleOpen} sx={styles.buttonModal}>
-            {" "}
-            <HiPencil />{" "}
-          </Button>
-          <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-          >
+          <button onClick={handleOpen}>
+            <HiPencil />
+          </button>
+          <Modal open={open} onClose={handleClose}>
             <Box sx={styles.modalCreatePost}>
               <CreatePost />
             </Box>

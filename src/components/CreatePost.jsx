@@ -35,7 +35,7 @@ const CreatePost = () => {
       description: data.description,
       category: data.category,
       img: data.img,
-      comments: [{}]
+      comments: []
     }
     addPostHandler(newPost);
     // addPostHandler(newPost);

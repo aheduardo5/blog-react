@@ -1,24 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
-
-
 .App {
   text-align: center;
 }
 
 .slogan {
   color: #e74708;
-  font-size: 30px;
+  font-size: 60px;
   font-family: 'Open Sans', sans-serif;
 
 
   .sloganText {
-    font-size: 15px;
+    font-size: 30px;
   }
   
   .navBar {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.title{
+  font-size: 70px;
+}
+
+@media (max-width: 575px){
+  .title{
+    font-size: 35px;
   }
 }

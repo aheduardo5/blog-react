@@ -5,8 +5,9 @@ export const postContext = createContext({
     addPostHandler: () => {},
     addCommentHandler: () => {},
     posts: [{}],
-    deleteHandler: () => undefined
-
+    deleteHandler: () => undefined,
+    editHandler: () => undefined,
+    styles: {},
 
 });
 

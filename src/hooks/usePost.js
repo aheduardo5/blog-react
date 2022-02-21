@@ -1,6 +1,37 @@
 import { useState } from "react";
 
 export const usePost = () => {
+  //Styles
+
+  const styles = {
+    modalCreatePost: {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: 400,
+      height: 550,
+      bgcolor: "background.paper",
+      border: "none",
+      borderRadius: "3%",
+      boxShadow: 24,
+      p: 4,
+    },
+    modalUpdatePost: {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: 400,
+      height: 550,
+      bgcolor: "background.paper",
+      border: "none",
+      borderRadius: "3%",
+      boxShadow: 24,
+      p: 4,
+    },
+  };
+
   const postsInit = [
     {
       id: 1,
@@ -50,11 +81,9 @@ export const usePost = () => {
   };
 
   const addCommentHandler = (data, id) => {
-
     const newComment = posts.filter((post) => post.id == id);
     newComment[0].comments.push(data);
 
-    
     //update comment
     setPosts((prevState) => {
       return prevState.map((prev) => {
@@ -72,20 +101,38 @@ export const usePost = () => {
         return prev;
       });
     });
-    return newComment
+    return newComment;
   };
 
   const deleteHandler = (id) => {
-    console.log('Hola')
-    // setUsers(users.filter((user) => user.id !== userId ))
-  }
+    setPosts(posts.filter((post) => post.id !== id));
+  };
 
+  const editHandler = (data) => {
+    setPosts((prevState) => {
+      return prevState.map((prev) => {
+        if (prev.id === data.id) {
+          return {
+            ...prev,
+            title: data.title,
+            description: data.description,
+            category: data.category,
+            img: data.img,
+            comments: data.comments,
+          };
+        }
+
+        return prev;
+      });
+    });
+  };
 
   return {
     posts,
     addPostHandler,
     addCommentHandler,
-    deleteHandler
-    
+    deleteHandler,
+    editHandler,
+    styles,
   };
 };

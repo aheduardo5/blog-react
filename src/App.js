@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import NavBarS from "./components/NavBarS";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -15,8 +14,10 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <CssBaseline />
-        <Header />
-        <NavBarS />
+        <div className="header">
+          <Header />
+          <NavBarS />
+        </div>
       </div>
       <Routes>
         <Route path="/" element={<HomePage />} />

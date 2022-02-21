@@ -1,9 +1,7 @@
 .box-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  height: 40rem;
-  padding: 1.5rem;
+  grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+  gap: 1.5rem;
 
   .post-content {
     .linkpost{
@@ -28,13 +26,3 @@
   }
 }
 
-
-@media (max-width: 768px){
-  .box-container{
-    display: flex;
-    flex-direction: column; 
-    .post-content{  
- text-align: center;
-    }
-  }
-}
