@@ -6,7 +6,6 @@ import Post from "../components/Post";
 const HomePage = () => {
   const { posts } = useContext(postContext);
   const params = useParams();
-  console.log(params)
 
   return (
     <div className="box-container">

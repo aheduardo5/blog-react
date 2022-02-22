@@ -79,9 +79,7 @@ const EditPost = ({ post }) => {
           {errors.img && <div className="error">{errors.img.message}</div>}
         </div>
         <div className="form-content">
-          <button className="button" type="submit">
-            Add post
-          </button>
+        <button className="button" type="submit">Add post</button>
         </div>
       </form>
     </div>

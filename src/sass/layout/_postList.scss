@@ -1,24 +1,36 @@
 .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1.5rem;
+  padding: 1.3rem;
 
   .post-content {
-    .linkpost{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 10px 17px -3px rgba(0, 0, 0, 0.31);
+    padding: 1.5rem;
+    .img-content {
+      img {
+        width: 30rem;
+        height: 20rem;
+      }
+    }
+    .linkpost {
       text-decoration: none;
-      color: #000000;
-    p {
-      text-transform: uppercase;
-      font-weight: 900;
-      margin-left: 2rem;
-     
-    } 
-  }
-    span {
-        display: flex;
-        font-size: 0.7rem;
+      color: #e0c6c6;
+      p {
+        text-transform: uppercase;
+        font-weight: 900;
         margin-left: 2rem;
       }
+    }
+    span {
+      display: flex;
+      font-size: 0.7rem;
+      margin-left: 2rem;
+    }
     .post {
       display: flex;
       margin-left: 2rem;
@@ -26,3 +38,18 @@
   }
 }
 
+
+.op-button {
+  border: none;
+  width:3rem;
+  height: 3rem;
+  border-radius:50%;
+  color: #fff;
+  background-color: #e95c1b;
+  transition: .5s;
+}
+
+.op-button:hover{
+  color: #e95c1b;
+  background-color: #e9e5e5;
+}

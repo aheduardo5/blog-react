@@ -20,7 +20,6 @@ const CommentBox = ({ post, deleteHandler }) => {
       comment: data.comment,
     };
     addCommentHandler(newComment, id);
-    console.log(posts);
   };
 
   return (

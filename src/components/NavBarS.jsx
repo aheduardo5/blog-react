@@ -58,7 +58,7 @@ const NavBarS = () => {
         </NavLink>
 
         <div className="createPost-modal">
-          <button onClick={handleOpen}>
+          <button className="op-button" onClick={handleOpen}>
             <HiPencil />
           </button>
           <Modal open={open} onClose={handleClose}>
